@@ -1,0 +1,1 @@
+web: gunicorn restpoint_back.wsgi
