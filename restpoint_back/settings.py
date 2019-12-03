@@ -115,4 +115,4 @@ STATIC_URL = '/static/'
 
 django_heroku.settings(locals())
 
-CORS_ORIGIN_WHITELIST = ('https://restpoint.herokuapp.com')
+CORS_ORIGIN_WHITELIST = ['https://restpoint.herokuapp.com']
