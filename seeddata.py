@@ -1,3 +1,5 @@
+from restpoint.models import Location, Review
+
 location1 = Location(location_name="Starbucks on Washington", image_url="https://media.gettyimages.com/photos/exterior-of-newly-redesigned-mcdonalds-location-picture-id458133131?s=612x612",lat= 41.882, long=82.627, address="E Washington St, Chicago, IL", description="This restroom feels alright", directions="Go Left, Go Right, then Stop", has_changing_table =False, is_accessible=True, is_gender_neutral=False, is_family_bathroom=True, number_of_stalls=3)
 location1.save()
 
