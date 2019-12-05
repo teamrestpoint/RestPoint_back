@@ -5,6 +5,7 @@ class LocationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Location
         fields = [
+            'id',
             'location_name',
             'image_url',
             'lat',
@@ -23,6 +24,7 @@ class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = [
+            'id',
             'location',
             'rating',
             'review_text',
