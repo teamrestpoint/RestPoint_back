@@ -1,7 +1,12 @@
 from rest_framework import serializers
 from .models import Location, Review
 
-class LocationSerializer(serializers.ModelSerializer):
+class PatchModelSerializer(serializers.ModelSerializer):
+    def __init__(self, *args, **kwargs):
+        kwargs['partial'] = True
+        super(PatchModelSerializer, self).__init__(*args, **kwargs)
+
+class LocationSerializer(PatchModelSerializer):
     avg_reviews = serializers.DecimalField(max_digits=3, decimal_places=2)
     reviews = serializers.SlugRelatedField(
         many=True,
@@ -29,7 +34,7 @@ class LocationSerializer(serializers.ModelSerializer):
             'reviews',
         ]
 
-class ReviewSerializer(serializers.ModelSerializer):
+class ReviewSerializer(PatchModelSerializer):
     class Meta:
         model = Review
         fields = [
