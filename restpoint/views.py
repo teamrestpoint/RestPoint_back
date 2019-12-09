@@ -5,7 +5,7 @@ from django.db.models import Avg
 
 class LocationViewSet(viewsets.ModelViewSet):
     queryset = Location.objects.all()
-    serializer_class = LocationSerializer(partial=True)
+    serializer_class = LocationSerializer
 
     def get_queryset(self):
         return Location.objects.annotate(
