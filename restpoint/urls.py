@@ -3,6 +3,6 @@ from .views import LocationViewSet, ReviewViewSet
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register(r'locations', LocationViewSet, basename='location')
-router.register(r'reviews', ReviewViewSet, basename='review')
+router.register(r'^locations$', LocationViewSet, basename='location')
+router.register(r'^reviews$', ReviewViewSet, basename='review')
 urlpatterns = router.urls
