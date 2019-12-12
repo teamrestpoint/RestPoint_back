@@ -25,7 +25,7 @@ class LocationSerializer(serializers.ModelSerializer):
             'is_gender_neutral',
             'is_family_bathroom',
             'number_of_stalls',
-            'avg_reviews',
+            # 'avg_reviews',
             'reviews',
         ]
 
