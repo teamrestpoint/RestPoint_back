@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Location, Review
 
 class LocationSerializer(serializers.ModelSerializer):
-    avg_reviews = serializers.DecimalField(max_digits=3, decimal_places=2)
+    # avg_reviews = serializers.DecimalField(max_digits=3, decimal_places=2)
     reviews = serializers.SlugRelatedField(
         many=True,
         read_only=True,
